@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function check() {
+            coffee = document.forms[0].coffee
+            answer = document.forms[0].answer
+            txt = ""
+            for (i = 0; i < coffee.length; ++i) {
+                if (coffee[i].checked) {
+                    txt = txt + coffee[i].value + ""
+                }
+            }
+            answer.value = "you ordered a coffee with" + txt
+        }
+    </script>
+</head>
+<body>
+    <form>
+        How would you like your coffee?<br /><br />
+        <input type="checkbox" name="coffee" value="cream" /> With Cream<br />
+        <input type="checkbox" name="coffee" value="Sugar" /> With Sugar<br />
+        <br />
+        <input type="button" name="test" onclick="check()" value="Send Order" /> <br />
+        <br />
+        <input type="text" name="answer" size="50" /><br />
+    </form>
+</body>
+</html>

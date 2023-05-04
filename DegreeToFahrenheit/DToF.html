@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function convert(degree)
+        {
+            if (degree == "C") {
+                F = document.myform.celsius.value * 9 / 5 + 32
+                document.myform.fahrenheit.value = Math.round(F)
+
+
+            }
+            else
+            {
+                C = (document.myform.fahrenheit.value - 32) * 5 / 9
+                document.myform.celsius.value = Math.round(C)
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <b>insert a number in either input field ,and the number will be converted into either celsius or fahrenhite</b>
+
+    <form name="myform">
+        <input name="celsius" onkeyup="convert('C')" >degrees Celsius <br />
+        equals<br />
+        <input name="fahrenheit" onkeyup="convert('F')" > degrees Fahrenheit<br />
+        <br />
+    </form>
+    <br />
+     Note that the <b>Math.round()</b> method is used,so that the result will be returned in whole number
+
+
+
+
+</body>
+</html>

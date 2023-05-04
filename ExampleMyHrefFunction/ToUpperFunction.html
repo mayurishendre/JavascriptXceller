@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function convertField(field) {
+            if (document.form1.convertUpper.checked) {
+                field.value = field.value.toUpperCase()
+
+            }
+        }
+
+        function convertAllFields() {
+            document.form1.fname.value = document.form1.fname.value.toUpperCase()
+            document.form1.lname.value = document.form1.lname.value.toUpperCase()
+        }
+    </script>
+
+    <form name="form1">
+        First name:
+        <input type="text" name="fname" onchange="convertField(this)" size="20" /><br />
+        Last name:
+        <input type="text" name="lname" onchange="convertField(this)" size="20" /><br />
+        Convert fields to upper case
+        <input type="checkbox" name="convertUpper" onclick="if (this.checked) { convertAllFields() }" value="ON" />
+
+    </form>
+</body>
+</html>

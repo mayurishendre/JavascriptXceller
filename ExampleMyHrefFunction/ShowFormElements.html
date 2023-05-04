@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        function ShowFormElements(theForm) {
+            str = "Form Elements:"
+            for (i = 0; i < theForm.length; i++)
+                str += "\n" +theForm.elements[i].name+" and its type is "+theForm.elements[i].type+" and its value is "+ theForm.elements[i].value
+
+            alert(str)
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        First name:<input type="text" name="fname" size="20" value=""><br />
+        Middle name:<input type="text" name="Mname" size="20" value=""><br />
+        Last name:<input type="text" name="Lname" size="20" value=""><br />
+        <input type="button" name="button1"  value="Diaplay name of form elements" onclick="ShowFormElements(this .form)">
+    </form>
+
+</body>
+</html>

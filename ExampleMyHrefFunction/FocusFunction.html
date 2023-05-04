@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        a:active{color:yellow;}
+    </style>
+    <script>
+        function getfocus() {
+            document.getElementById('rdf').focus()
+        }
+        function losefocus() {
+            document.getElementById('rdf').blur()
+        }
+    </script>
+</head>
+<body>
+
+    <a id="rdf" href="https://rediffmail.com"> Visit Rediffmail.com</a>
+    <form>
+        <input type="button" onclick="getfocus()" value="Get Focus" >
+        <input type="button" onclick="losefocus()" value="Lose Focus" >
+    </form>
+</body>
+</html>
